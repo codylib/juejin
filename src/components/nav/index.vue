@@ -9,7 +9,7 @@ const handleClick = (e) => {
 <template>
   <a-space class="header-box">
     <div class="header-left-nav">
-      <div class="header-logo"><img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="107" height="22" /></div>
+      <div class="header-logo"><a href="/"><img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="107" height="22" /></a></div>
       <div class="header-menu-box">
         <a-menu class="header-menu" mode="horizontal" :default-selected-keys="['/']" @menu-item-click="handleClick">
           <a-menu-item key="/">首页</a-menu-item>
@@ -32,7 +32,7 @@ const handleClick = (e) => {
         </div>
         <div>
           <a-avatar :style="{ backgroundColor: '#3370ff' }">
-            <IconUser size="18" />
+            <IconUser size="16" />
           </a-avatar>
         </div>
       </a-space>
