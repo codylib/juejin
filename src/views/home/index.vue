@@ -1,35 +1,84 @@
 <script setup>
-import {
-  IconMenuFold,
-  IconMenuUnfold,
-  IconApps,
-  IconBug,
-  IconBulb
-} from '@arco-design/web-vue/es/icon'
 </script>
 
 <template>
-  <a-row :gutter="12">
+  <a-row :gutter="20">
     <a-col :span="4">
-      <a-menu
-        :default-open-keys="['0']"
-        :default-selected-keys="['0_1']"
-        :style="{ width: `${width}px`, height: 'calc(100% - 28px)' }"
-      >
-        <a-menu-item key="/following"><template #icon><icon-subscribe-add /></template>关注</a-menu-item>
-        <a-menu-item key="/recommended"><template #icon><icon-compass /></template>综合</a-menu-item>
-        <a-menu-item key="/backend"><template #icon><icon-computer /></template>后端</a-menu-item>
-        <a-menu-item key="/frontend"><template #icon><icon-file-video /></template>前端</a-menu-item>
-        <a-menu-item key="1_1"><template #icon><icon-apps></icon-apps></template>Android</a-menu-item>
-        <a-menu-item key="1_2"><template #icon><icon-apps></icon-apps></template>IOS</a-menu-item>
-        <a-menu-item key="2_0"><template #icon><icon-apps></icon-apps></template>人工智能</a-menu-item>
-        <a-menu-item key="2_1"><template #icon><icon-apps></icon-apps></template>开发工具</a-menu-item>
-        <a-menu-item key="2_2"><template #icon><icon-apps></icon-apps></template>代码人生</a-menu-item>
-        <a-menu-item key="2_2"><template #icon><icon-apps></icon-apps></template>阅读</a-menu-item>
-        <a-menu-item key="2_2"><template #icon><icon-apps></icon-apps></template>排行榜</a-menu-item>
-      </a-menu>
+      <div class="sider-menu">
+        <a-menu
+          :default-selected-keys="['/recommended']"
+          :style="{ width: `100%`, height: 'calc(100% - 28px)' }"
+        >
+          <a-menu-item key="/following">
+            <template #icon>
+              <icon-subscribe-add />
+            </template>
+            关注
+          </a-menu-item>
+          <a-menu-item key="/recommended">
+            <template #icon>
+              <icon-compass />
+            </template>
+            综合
+          </a-menu-item>
+          <a-menu-item key="/backend">
+            <template #icon>
+              <icon-computer />
+            </template>
+            后端
+          </a-menu-item>
+          <a-menu-item key="/frontend">
+            <template #icon>
+              <icon-file-video />
+            </template>
+            前端
+          </a-menu-item>
+          <a-menu-item key="1_1">
+            <template #icon>
+              <icon-apps></icon-apps>
+            </template>
+            Android
+          </a-menu-item>
+          <a-menu-item key="1_2">
+            <template #icon>
+              <icon-apps></icon-apps>
+            </template>
+            IOS
+          </a-menu-item>
+          <a-menu-item key="2_0">
+            <template #icon>
+              <icon-apps></icon-apps>
+            </template>
+            人工智能
+          </a-menu-item>
+          <a-menu-item key="2_1">
+            <template #icon>
+              <icon-apps></icon-apps>
+            </template>
+            开发工具
+          </a-menu-item>
+          <a-menu-item key="2_2">
+            <template #icon>
+              <icon-apps></icon-apps>
+            </template>
+            代码人生
+          </a-menu-item>
+          <a-menu-item key="2_2">
+            <template #icon>
+              <icon-apps></icon-apps>
+            </template>
+            阅读
+          </a-menu-item>
+          <a-menu-item key="2_2">
+            <template #icon>
+              <icon-apps></icon-apps>
+            </template>
+            排行榜
+          </a-menu-item>
+        </a-menu>
+      </div>
     </a-col>
-    <a-col :span="16">
+    <a-col :span="14">
       <div class="timeline">
         <a-list>
           <a-list-item v-for="idx in 10" :key="idx" action-layout="vertical">
@@ -40,6 +89,7 @@ import {
             </template>
             <template #extra>
               <a-image
+                width="100px"
                 height="80px"
                 alt="img"
                 fit="cover"
@@ -55,16 +105,37 @@ import {
         </a-list>
       </div>
     </a-col>
-    <a-col :span="4">
-      <div class="signin">登录</div>
+    <a-col :span="6">
+      <div class="signin" style="width: 100%; display: flex; flex-direction: column">
+          <div class="signin-content">
+            <div>
+              <div style="font-size: 16px">上午好！</div>
+              <div style="font-size: 12px; color: gray; margin-top: 2px">点亮在社区的每一天</div>
+            </div>
+            <a-button type="primary" size="large">去签到</a-button>
+          </div>
+      </div>
     </a-col>
   </a-row>
 </template>
 
 <style scoped>
-.arco-icon { font-size: 18px; }
+.sider-menu .arco-icon {
+  font-size: 20px;
+}
 .timeline {
   background: white;
-  width: 720px;
+  width: 100%;
+}
+.signin {
+  width: 100%;
+}
+
+.signin-content {
+  background: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 </style>
