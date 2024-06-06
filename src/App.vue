@@ -5,10 +5,16 @@ import HeaderBar from '@/components/nav/index.vue'
 
 <template>
   <div class="layout-box">
-  <a-layout>
-    <a-layout-header class="heade-box"><HeaderBar /></a-layout-header>
-    <a-layout-content class="content-box"><RouterView /></a-layout-content>
-  </a-layout>
+    <a-layout>
+      <a-layout-header class="heade-box">
+        <HeaderBar />
+      </a-layout-header>
+      <a-layout-content class="content-box">
+        <div class="content-body">
+          <RouterView />
+        </div>
+      </a-layout-content>
+    </a-layout>
   </div>
 </template>
 
@@ -19,11 +25,19 @@ import HeaderBar from '@/components/nav/index.vue'
   display: flex;
   flex-direction: row;
 }
+
 .layout-box .heade-box {
   height: 60px;
   box-shadow: 0 0 2px 0 gray;
 }
+
 .layout-box .content-box {
-  height: 100%;
+  background-color: #f0f2f5;
+}
+
+.layout-box .content-box .content-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 </style>
