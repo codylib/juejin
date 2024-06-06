@@ -12,40 +12,21 @@ import {
   <a-row :gutter="12">
     <a-col :span="4">
       <a-menu
-        showCollapseButton
         :default-open-keys="['0']"
         :default-selected-keys="['0_1']"
         :style="{ width: `${width}px`, height: 'calc(100% - 28px)' }"
       >
-        <a-sub-menu key="0">
-          <template #icon>
-            <IconApps></IconApps>
-          </template>
-          <template #title>Navigation 1</template>
-          <a-menu-item key="0_0">Menu 1</a-menu-item>
-          <a-menu-item key="0_1">Menu 2</a-menu-item>
-          <a-menu-item key="0_2" disabled>
-            Menu 3
-          </a-menu-item>
-        </a-sub-menu>
-        <a-sub-menu key="1">
-          <template #icon>
-            <IconBug></IconBug>
-          </template>
-          <template #title>Navigation 2</template>
-          <a-menu-item key="1_0">Menu 1</a-menu-item>
-          <a-menu-item key="1_1">Menu 2</a-menu-item>
-          <a-menu-item key="1_2">Menu 3</a-menu-item>
-        </a-sub-menu>
-        <a-sub-menu key="2">
-          <template #icon>
-            <IconBulb></IconBulb>
-          </template>
-          <template #title>Navigation 3</template>
-          <a-menu-item key="2_0">Menu 1</a-menu-item>
-          <a-menu-item key="2_1">Menu 2</a-menu-item>
-          <a-menu-item key="2_2">Menu 3</a-menu-item>
-        </a-sub-menu>
+        <a-menu-item key="/following"><template #icon><icon-subscribe-add /></template>关注</a-menu-item>
+        <a-menu-item key="/recommended"><template #icon><icon-compass /></template>综合</a-menu-item>
+        <a-menu-item key="/backend"><template #icon><icon-computer /></template>后端</a-menu-item>
+        <a-menu-item key="/frontend"><template #icon><icon-file-video /></template>前端</a-menu-item>
+        <a-menu-item key="1_1"><template #icon><icon-apps></icon-apps></template>Android</a-menu-item>
+        <a-menu-item key="1_2"><template #icon><icon-apps></icon-apps></template>IOS</a-menu-item>
+        <a-menu-item key="2_0"><template #icon><icon-apps></icon-apps></template>人工智能</a-menu-item>
+        <a-menu-item key="2_1"><template #icon><icon-apps></icon-apps></template>开发工具</a-menu-item>
+        <a-menu-item key="2_2"><template #icon><icon-apps></icon-apps></template>代码人生</a-menu-item>
+        <a-menu-item key="2_2"><template #icon><icon-apps></icon-apps></template>阅读</a-menu-item>
+        <a-menu-item key="2_2"><template #icon><icon-apps></icon-apps></template>排行榜</a-menu-item>
       </a-menu>
     </a-col>
     <a-col :span="16">
@@ -81,6 +62,7 @@ import {
 </template>
 
 <style scoped>
+.arco-icon { font-size: 18px; }
 .timeline {
   background: white;
   width: 720px;
