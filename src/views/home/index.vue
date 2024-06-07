@@ -83,9 +83,9 @@
         <a-list>
           <a-list-item v-for="idx in 10" :key="idx" action-layout="vertical">
             <template #actions>
-              <span><icon-heart />83</span>
-              <span><icon-star />84</span>
-              <span><icon-message />Reply</span>
+              <span><icon-eye />83k</span>
+              <span><icon-thumb-up />84</span>
+              <span><icon-message />评论</span>
             </template>
             <template #extra>
               <a-image
@@ -106,15 +106,21 @@
       </div>
     </a-col>
     <a-col :span="6">
-      <div class="signin" style="width: 100%; display: flex; flex-direction: column">
-          <div class="signin-content">
-            <div>
-              <div style="font-size: 16px">上午好！</div>
-              <div style="font-size: 12px; color: gray; margin-top: 2px">点亮在社区的每一天</div>
-            </div>
-            <a-button type="primary" size="large">去签到</a-button>
+      <a-space direction="vertical" class="signin" style="display: flex; flex-direction: column">
+        <div class="signin-content">
+          <div>
+            <div style="font-size: 16px">上午好！</div>
+            <div style="font-size: 12px; color: gray; margin-top: 2px">点亮在社区的每一天</div>
           </div>
-      </div>
+          <a-button type="outline" size="large">去签到</a-button>
+        </div>
+        <a-card>
+          ByteDance's core product, Toutiao ("Headlines"), is a content platform in
+          China and around the world. Toutiao started out as a news recommendation
+          engine and gradually evolved into a platform delivering content in various
+          formats.
+        </a-card>
+      </a-space>
     </a-col>
   </a-row>
 </template>
@@ -123,10 +129,12 @@
 .sider-menu .arco-icon {
   font-size: 20px;
 }
+
 .timeline {
   background: white;
   width: 100%;
 }
+
 .signin {
   width: 100%;
 }

@@ -29,10 +29,15 @@ import HeaderBar from '@/components/nav/index.vue'
 .layout-box .heade-box {
   height: 60px;
   box-shadow: 0 0 2px 0 gray;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background: white;
 }
 
 .layout-box .content-box {
   background-color: #f0f2f5;
+  margin-top: 60px;
 }
 
 .layout-box .content-box .content-body {
