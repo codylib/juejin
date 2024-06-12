@@ -33,43 +33,43 @@
             </template>
             前端
           </a-menu-item>
-          <a-menu-item key="1_1">
+          <a-menu-item key="/android">
             <template #icon>
-              <icon-apps></icon-apps>
+              <icon-robot />
             </template>
             Android
           </a-menu-item>
-          <a-menu-item key="1_2">
+          <a-menu-item key="/ios">
             <template #icon>
               <icon-apps></icon-apps>
             </template>
             IOS
           </a-menu-item>
-          <a-menu-item key="2_0">
+          <a-menu-item key="/ai">
             <template #icon>
               <icon-apps></icon-apps>
             </template>
             人工智能
           </a-menu-item>
-          <a-menu-item key="2_1">
+          <a-menu-item key="/freebie">
             <template #icon>
               <icon-apps></icon-apps>
             </template>
             开发工具
           </a-menu-item>
-          <a-menu-item key="2_2">
+          <a-menu-item key="/career">
             <template #icon>
               <icon-apps></icon-apps>
             </template>
             代码人生
           </a-menu-item>
-          <a-menu-item key="2_2">
+          <a-menu-item key="/article">
             <template #icon>
               <icon-apps></icon-apps>
             </template>
             阅读
           </a-menu-item>
-          <a-menu-item key="2_2">
+          <a-menu-item key="/hot">
             <template #icon>
               <icon-apps></icon-apps>
             </template>
@@ -81,15 +81,15 @@
     <a-col :span="14">
       <div class="timeline">
         <a-list>
-          <a-list-item v-for="idx in 10" :key="idx" action-layout="vertical">
+          <a-list-item v-for="idx in 20" :key="idx" action-layout="vertical">
             <template #actions>
               <span><icon-eye />83k</span>
               <span><icon-thumb-up />84</span>
-              <span><icon-message />评论</span>
+              <span><icon-reply />分享</span>
             </template>
             <template #extra>
               <a-image
-                width="100px"
+                width="120px"
                 height="80px"
                 alt="img"
                 fit="cover"
@@ -114,7 +114,10 @@
           </div>
           <a-button type="outline" size="large">去签到</a-button>
         </div>
-        <a-card>
+        <a-card title="文章榜">
+          <template #extra>
+            <icon-refresh />换一换
+          </template>
           ByteDance's core product, Toutiao ("Headlines"), is a content platform in
           China and around the world. Toutiao started out as a news recommendation
           engine and gradually evolved into a platform delivering content in various
